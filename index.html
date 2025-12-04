@@ -261,7 +261,7 @@ I think active aerodynamics can be an important part of the future of road cars,
         alert("Last modified time has been successfully verified from GitHub API.");
     }
     // Initial load to display the time on page load
-    window.onload = getLastUpdatedTime;
+
 </script>
 
 
@@ -303,8 +303,12 @@ I think active aerodynamics can be an important part of the future of road cars,
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
   // Run the function for specific sections and display total count when the page loads
-  window.onload = displayTotalWordCount;
+window.onload = function () {
+    getLastUpdatedTime();
+    displayTotalWordCount();
+};
 </script>
+
 </html>
 
 
